@@ -1,0 +1,2 @@
+module slack_bot_stock_price
+end

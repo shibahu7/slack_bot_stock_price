@@ -1,0 +1,9 @@
+name = "slack_bot_stock_price"
+uuid = "4f8e74f1-34f0-47a2-8e2d-7f319b3bd924"
+authors = ["ryuma <salz.lawn0805@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"

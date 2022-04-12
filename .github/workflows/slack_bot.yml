@@ -1,0 +1,16 @@
+name: send-stock-price
+on:
+  schedule:
+    - cron:  '0 23 * * *' # AM 8:00
+jobs:
+    build:
+        name: Julia
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v1.0.0
+          - uses: julia-actions/setup-julia@v1
+            with:
+              version: 1.7.0
+          - run: |
+              julia .github/workflows/instantiate.jl
+              julia --project src/slack_send_message.jl ${{ secrets.SLACK_BOT_TOKEN }} # slack bot token
